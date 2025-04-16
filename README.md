@@ -1,48 +1,35 @@
-# Cryptocurrency News Aggregator in Rust
+## Cryptocurrency News Aggregator in Rust
 
-A simple yet powerful web service that aggregates the latest cryptocurrency news using the Rust programming language. Users can search by a cryptocurrency name or symbol and view the most recent news from multiple sources.
+A simple, efficient, and scalable web service built with Rust that aggregates the latest cryptocurrency news. It allows users to search for news by cryptocurrency name or symbol, pulling articles from multiple reputable sources.
 
----
+## Project Overview
 
-## Objective
+This web service is designed to provide real-time cryptocurrency news through a clean and user-friendly interface. Users can search by cryptocurrency names or symbols, and the service will fetch and display the most recent articles from multiple public news APIs.
 
-Build a web-based service in **Rust** that:
-- Accepts cryptocurrency names or symbols (e.g., `btc`, `eth`)
-- Fetches recent news from multiple public APIs
-- Displays the results in a clean and structured web interface
+## Key Features
 
----
+Cryptocurrency Search
+Users can search by cryptocurrency symbol or name (e.g., BTC, ETH), and the service will retrieve the latest news related to the selected cryptocurrency.
 
-## Tech Stack
+API Integration
+News is fetched from reliable sources such as:
 
-| Layer       | Technology Used                                                  |
-|------------|------------------------------------------------------------------|
-| Backend     | [Rust](https://www.rust-lang.org/) with `warp`, `reqwest`, `tokio`, `serde`, `serde_json` |
-| Frontend    | Basic HTML (served using `warp`)                                |
-| APIs Used   | [CoinGecko](https://www.coingecko.com/en/api), [NewsData.io](https://newsdata.io/) |
-| (Optional)  | Caching with Redis / Storage with PostgreSQL (Not Implemented Yet) |
+CoinGecko API – for cryptocurrency metadata
 
----
+NewsData.io API – for fetching the latest news articles.
 
-## ✨ Features
+News Display
+The results include detailed information, such as:
 
-### ✅ Core Features
+Article Title
 
-- **Search by Symbol**  
-  Input a symbol (e.g., `btc`) to retrieve relevant news.
+Source
 
-- **Multiple API Integration**  
-  News and data are fetched from:
-  - [CoinGecko](https://www.coingecko.com/en/api) for metadata.
-  - [NewsData.io](https://newsdata.io/) for real-time articles.
+Publication Date
 
-- 📰 **Structured News Display**  
-  News articles include:
-  - Title
-  - Source
-  - Date
-  - Summary
-  - Link to the full article
+Summary
 
-- **Error Handling**  
-  Gracefully handles API errors, invalid inputs, and unavailable data.
+Link to Full Article
+
+Error Management
+The service gracefully handles potential API errors, invalid user inputs, and unavailable data, ensuring a smooth user experience.
